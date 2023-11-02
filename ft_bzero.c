@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 20:47:51 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/02 12:53:24 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/02 15:04:02 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,14 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-/*
+
 #include <stdio.h>
 
 int main(void)
 {
 	unsigned char a[] = "cr7";
 	size_t	b = 2;
+
 	ft_bzero(a, b);
 	printf("%s\n", a);
 }
-*/

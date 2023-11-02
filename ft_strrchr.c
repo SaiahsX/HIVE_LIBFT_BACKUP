@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 16:39:28 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/02 13:07:12 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/02 15:01:44 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@ it locates the last occurence of 'c' in the string pointed to by 'str'*/
 /* The return value is the pointer to the 
 address of the last occurence of 'c' and
  everything afterwards is also printed*/
+/* In this function, i used the behaviour of ft_strlen 
+to count to the end of the string and searched backwards*/
 /* This function imitates the standard C library funtion strrchr*/
 
 char	*ft_strrchr(const char *str, int c)

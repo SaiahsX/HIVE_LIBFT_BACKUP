@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 14:48:33 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/10/31 16:37:58 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/02 15:00:29 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ in the string pointed to by 'str'.*/
 Null if the character does not appear in the string*/
 /* The return value is the first occurence of the character 
 and every other character afterwards */
+/* This function imitates the behaviour of the standard Clibrary
+function strchr*/
 
 char	*ft_strchr(const char *str, int c)
 {
