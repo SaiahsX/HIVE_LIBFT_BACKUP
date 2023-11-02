@@ -6,9 +6,14 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 20:47:51 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/02 12:29:52 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/02 12:53:24 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* This function is intended to write 'n' zeros to a byte string 's'*/
+/*'void *s' is typecasted to an 'unsigned char *str'*/
+/* Since the function is a void, it returns nothing and in the mains file
+we only call the function and pass the reulting string to be printed*/
 
 #include <string.h>
 #include <strings.h>

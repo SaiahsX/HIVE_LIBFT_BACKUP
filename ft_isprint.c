@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 15:29:39 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/10/30 16:36:14 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/02 13:06:25 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@ from the ASCII table,then it returns a value of 1 if that is true
 and 0 if that is false.
 */
 /* This fuction is to imitate the behaviour of the 
-standard C library function 'isalnum'
-*/
+standard C library function 'isalnum'*/
+
 int	ft_isprint(int p)
 {
 	if ((p >= 040 && p <= 077) || (p >= 100 && p <= 114))

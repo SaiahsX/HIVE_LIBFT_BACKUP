@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 17:20:48 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/10/30 16:10:58 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/02 13:06:49 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 then it returns a value of 1 if that is true and 0 if that is false.
 */
 /* This fuction is to imitate the behaviour of the 
-standard C library function 'isalnum'
-*/
+standard C library function 'isalnum'*/
+
 int	ft_isalnum(int an)
 {
 	if ((an >= 'A' && an <= 'Z') || (an >= 'a' && an <= 'z'))

@@ -6,9 +6,16 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 18:19:18 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/10/31 20:22:03 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/02 13:05:59 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*This function compares strings 'src' and 'dest' lexicographically 
+upto but not more than a specified 'n' characters*/
+/* It returns an int value at the first occurence of a difference upto
+the specified 'n' characters*/
+/* The return vallue is a difference in their ascii character values*/
+/* This function imitates the behaviour of standard Clibrary function strncmp*/
 
 #include <string.h>
 

@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 15:12:40 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/10/30 16:20:00 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/02 13:06:41 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 character to the argument 'alf' is an alphabet*/
 /* It returns 1 if it is true and 0 if its false */
 /* This function imitates the standard Clibrary function 'isalpha' */
+
 int	ft_isalpha(int alf)
 
 {

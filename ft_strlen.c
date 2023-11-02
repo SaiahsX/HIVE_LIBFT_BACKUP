@@ -6,13 +6,14 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 12:30:44 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/10/30 17:39:42 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/02 13:06:06 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /* This function counts the number of characters 
 pointed to by the string 'str' and returns an integer value 'count'*/
 /* This function imitates the standard C libraray function 'strlen'*/
+
 int	ft_strlen(char *str)
 {
 	int	count;
