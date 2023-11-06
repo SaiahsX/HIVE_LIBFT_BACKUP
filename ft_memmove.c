@@ -1,45 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/31 20:47:51 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/06 14:40:11 by oadewumi         ###   ########.fr       */
+/*   Created: 2023/11/06 16:12:52 by oadewumi          #+#    #+#             */
+/*   Updated: 2023/11/06 22:14:11 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* This function is intended to write 'n' zeros to a byte string 's'*/
-/*'void *s' is typecasted to an 'unsigned char *str'*/
-/* Since the function is a void, it returns nothing and in the mains file
-we only call the function and pass the reulting string to be printed*/
-
 #include <string.h>
-#include <strings.h>
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char	*str;
+	unsigned char	*dest;
+	const char		*org;
 	size_t			i;
+	int				dir;
 
+	dest = dst;
+	org = (char *)src;
 	i = 0;
-	str = (unsigned char *) s;
-	while (i < n)
+	dir = 1;
+	if (dst > src)
 	{
-		str[i] = 0;
-		i++;
+		i = len - 1;
+		dir = -1;
 	}
+	while (len-- > 0)
+	{
+		dest[i] = org[i];
+		i += dir;
+	}
+	return (dst);
 }
 /*
 #include <stdio.h>
 
 int main(void)
 {
-	unsigned char a[] = "cr7";
-	size_t	b = 2;
+	char	str[]  = "start stop";
+	char	str1[] = "start stop";
 
-	ft_bzero(a, b);
-	printf("%s\n", a);
+	printf("%s\n", ft_memmove(str, str + 6, 4));
+	printf("%s\n", memmove(str1, str1 + 6, 4));
 }
 */
