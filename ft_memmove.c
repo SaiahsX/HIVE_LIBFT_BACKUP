@@ -6,9 +6,19 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:12:52 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/06 22:14:11 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/07 15:02:30 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* This function copies  'len' bytes from string 'src' to string 'dst'.
+The two strings may overlap; 
+the copy is always done in a non-destructive manner. */
+/* This fuunction is written such that if the 2 strings overlap, 
+it reverses the direction of copy.
+This is done first by specifying a condition 'if dst > src' and
+a switch 'dir' is used to influence the direction of copying.*/
+/* This function imittes the behaviour of the standard C library function
+'memmove'*/
 
 #include <string.h>
 
