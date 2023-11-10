@@ -6,12 +6,12 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 14:51:17 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/10 17:36:05 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/10 19:35:12 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
-
+/*
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
@@ -32,54 +32,54 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (i);
 }
-/*
+*/
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	char	*s;
-	size_t	len_dst;
+	size_t	l_dst;
 	size_t	res;
-	size_t	len_src;
+	size_t	l_src;
 	size_t	i;
 
-	len_dst = 0;
-	len_src = 0;
+	l_dst = 0;
+	l_src = 0;
 	s = (char *)src;
-	while (dst[len_dst] != '\0')
-		len_dst++;
-	while (s[len_src] != '\0')
-		len_src++;
+	while (dst[l_dst] != '\0')
+		l_dst++;
+	while (s[l_src] != '\0')
+		l_src++;
 	res = 0;
 	i = 0;
-	if (size > len_dst)
-		res = len_src + len_dst;
+	if (size > l_dst)
+		res = l_src + l_dst;
 	else
-		res = len_src + size;
-	while (s[i] && (len_dst + 1) < size)
+		res = l_src + size;
+	while (s[i] && (l_dst + 1) < size)
 	{
-		dst[len_dst] = s[i];
-		len_dst++;
+		dst[l_dst] = s[i];
+		l_dst++;
 		i++;
 	}
-	dst[len_dst] = '\0';
+	dst[l_dst] = '\0';
 	return (res);
 }
-*/
+
 #include <stdio.h>
 
 int	main(void)
 {
-	char	d[21] = "Hello_";
-	char	s[10] = "";
+	char	d[] = "Hello, you are doing alright";
+	char	s[] = ", yes it is true";
 	int	t = 20;
 
 	printf("%zu\n", ft_strlcat(d, s, t));
 	printf("%s\n", d);
 
-	char	dx[21] = "Hello_";
-	char	sx[10] = "";
-	int	tx = 20;
+	char	dx[] = "Hello, you are doing alright";
+	char	sx[] = ", yes it is true";
+	int		tx = 20;
 
-	int a = strlcat(dx, sx, tx);
+	int		a = strlcat(dx, sx, tx);
 
 	printf("%d\n", a);
 	printf("%s\n", dx);
