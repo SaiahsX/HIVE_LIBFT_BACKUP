@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/27 15:51:54 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/02 13:06:12 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/13 13:37:21 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ the first 'len' characters of the string pointed to by the argument 'b' */
 /* void *b is an undeclared argument, 
 hence an Unsigned char was declared to dereference/assiged to it */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {

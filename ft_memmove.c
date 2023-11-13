@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 16:12:52 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/07 15:02:30 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/13 13:37:15 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ a switch 'dir' is used to influence the direction of copying.*/
 /* This function imittes the behaviour of the standard C library function
 'memmove'*/
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {

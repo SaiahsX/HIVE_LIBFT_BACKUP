@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/02 15:12:00 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/06 15:22:52 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/13 13:37:08 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 /* in case of null inputs, it was handled by the first 'if' statement*/
 /* The return value is the original value of dst*/
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t n)
 {

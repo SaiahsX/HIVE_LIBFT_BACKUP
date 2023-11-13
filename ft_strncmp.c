@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 18:19:18 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/02 13:05:59 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/13 13:37:47 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ the specified 'n' characters*/
 /* The return vallue is a difference in their ascii character values*/
 /* This function imitates the behaviour of standard Clibrary function strncmp*/
 
-#include <string.h>
+#include "libft.h"
 
 int	ft_strncmp(const char *src, const char *dest, size_t n)
 {

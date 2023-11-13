@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 14:48:33 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/02 15:00:29 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/13 15:10:52 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	*ft_strchr(const char *str, int c)
 int main(void)
 {
 	char	s[] = "and he will set up a kingdom";
-	int	i = 'z';
+	int	i = 'l';
 	printf("%s\n", ft_strchr(s, i));
 }
 */

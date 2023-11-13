@@ -6,78 +6,56 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/10 14:51:17 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/10 19:35:12 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/13 15:25:27 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-/*
+#include "libft.h"
+
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	i;
-	size_t	c;
+	size_t	dstlen;
+	size_t	srclen;
+	size_t	src_index;
+	size_t	space_for_src;
 
-	i = 0;
-	c = 0;
-	while (i < dstsize && dst[i] != '\0')
+	dstlen = 0;
+	srclen = 0;
+	while (src[srclen] != '\0')
 	{
-		i++;
+		srclen++;
 	}
-	while (src[c] != '\0' && i < dstsize)
+	while (dst[dstlen] != '\0')
 	{
-		dst[i] = src[c];
-		i++;
-		c++;
+		dstlen++;
 	}
-	dst[i] = '\0';
-	return (i);
-}
-*/
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
-{
-	char	*s;
-	size_t	l_dst;
-	size_t	res;
-	size_t	l_src;
-	size_t	i;
-
-	l_dst = 0;
-	l_src = 0;
-	s = (char *)src;
-	while (dst[l_dst] != '\0')
-		l_dst++;
-	while (s[l_src] != '\0')
-		l_src++;
-	res = 0;
-	i = 0;
-	if (size > l_dst)
-		res = l_src + l_dst;
-	else
-		res = l_src + size;
-	while (s[i] && (l_dst + 1) < size)
+	if (dstlen > dstsize)
+		return (dstsize + srclen);
+	space_for_src = dstsize - dstlen - 1;
+	src_index = 0;
+	while (src[src_index] != '\0' && src_index < space_for_src)
 	{
-		dst[l_dst] = s[i];
-		l_dst++;
-		i++;
+		dst[dstlen + src_index] = src[src_index];
+		src_index++;
 	}
-	dst[l_dst] = '\0';
-	return (res);
+	dst[dstlen + src_index] = '\0';
+	return (dstlen + srclen);
 }
 
 #include <stdio.h>
-
+#include <string.h>
 int	main(void)
 {
-	char	d[] = "Hello, you are doing alright";
+	char	d[70] = "Hello, you are doing alright";
 	char	s[] = ", yes it is true";
-	int	t = 20;
+	int	t = 50;
 
 	printf("%zu\n", ft_strlcat(d, s, t));
 	printf("%s\n", d);
 
-	char	dx[] = "Hello, you are doing alright";
+	char	dx[70] = "Hello, you are doing alright";
 	char	sx[] = ", yes it is true";
-	int		tx = 20;
+	int		tx = 50;
 
 	int		a = strlcat(dx, sx, tx);
 

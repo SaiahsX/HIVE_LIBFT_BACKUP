@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/06 15:23:56 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/07 15:08:10 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/13 13:36:52 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ is also compensatimg for null strings values which returns a null*/
 /* This function imitates the behaviour of the standard C library
 function 'memcmp'*/
 
-#include <string.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

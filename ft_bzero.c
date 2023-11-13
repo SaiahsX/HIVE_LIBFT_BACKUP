@@ -6,17 +6,17 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 20:47:51 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/06 14:40:11 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/13 14:53:38 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* This function is intended to write 'n' zeros to a byte string 's'*/
-/*'void *s' is typecasted to an 'unsigned char *str'*/
+/* This function is intended to write 'n' zeros to a byte string 's'	*/
+/*'void *s' is typecasted to an 'unsigned char *str'	*/
 /* Since the function is a void, it returns nothing and in the mains file
-we only call the function and pass the reulting string to be printed*/
+we only call the function and pass the reulting string to be printed	*/
+/* 'i' is the string index (counter)	*/
 
-#include <string.h>
-#include <strings.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

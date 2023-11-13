@@ -6,11 +6,11 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 17:20:48 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/02 13:06:49 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/13 14:55:49 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*	This function checks if the argument 'an' is all numbers,
+/*	This function checks if the argument 'an' is all numbers or digits,
 then it returns a value of 1 if that is true and 0 if that is false.
 */
 /* This fuction is to imitate the behaviour of the 
