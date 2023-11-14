@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 13:30:22 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/13 18:53:20 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/14 15:36:20 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memset(void *b, int c, size_t len);
 int		ft_strncmp(const char *src, const char *dest, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
+int		ft_atoi(const char *str);
 int		ft_strlen(char *str);
 int		ft_isdigit(int num);
 int		ft_isalpha(int alf);
