@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 14:14:27 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/16 18:28:14 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/16 18:42:33 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,7 @@ int	main(int ac, char **av)
 {
 	int	mine;
 	int	org;
+
 	if (ac == 2)
 	{
 		mine = ft_atoi(av[1]);
