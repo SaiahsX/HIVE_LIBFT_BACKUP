@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/24 17:44:33 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/02 13:06:37 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/20 17:31:35 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,5 @@ int main(void)
 	printf("%d\n", ft_isascii(a));
 	printf("%d\n", ft_isascii(b));
 	printf("%d\n", ft_isascii(c));
-
 }
 */

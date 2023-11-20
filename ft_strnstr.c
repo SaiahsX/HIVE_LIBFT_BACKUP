@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 18:42:22 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/14 15:24:36 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/20 18:10:11 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
- 
+/*  
 #include <stdio.h>
 #include <string.h>
 int	main(void)
@@ -72,4 +72,4 @@ int	main(void)
 	char	xned[] = "elk";
 	
 	printf("%s\n", strnstr(xhay, xned, 14));
-}
+} */
