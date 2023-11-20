@@ -6,10 +6,23 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 18:45:35 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/18 19:29:37 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/20 16:49:44 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*	This function uses recursive method to convert integer values to ASCII 
+character and print(write) it out.	*/
+/*	In this function, the min int (-2147483648) to be printed exclusively.	*/
+/*	Else, This function takes care of every value 
+up to max int (2147483647).	*/
+/*	If there is a negative value, the '-' sign is printed out exclusively
+because to iterate we use need to also convert the int to +ve for the 
+recursion to write out the converted result	*/
+/*	Recursion in the case works in a way that it splits the int via
+division (/) & iterates to the first int digit which is then converted to 
+ASCII xter, then prints & recursion works its way back up via use 
+of % opertion for converting the next digit and prints until it gets
+to the top. 	*/
 
 #include "libft.h"
 
