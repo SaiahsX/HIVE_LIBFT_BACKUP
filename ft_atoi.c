@@ -30,25 +30,25 @@ is used to calculate the output & it is fed back to the main function.	*/
 
 static int	ft_ret_output(const char *str, int polarity)
 {
-	size_t	output;
-	int		indx;
+	size_t	result;
+	int		i;
 
-	output = 0;
-	indx = 0;
-	while (ft_isdigit(str[indx]))
+	result = 0;
+	i = 0;
+	while (ft_isdigit(str[i]))
 	{
-		if (output > FT_LONG_MAX / 10
-			|| (output == FT_LONG_MAX / 10 && str[indx] > FT_LONG_MAX % 10))
+		if (result > FT_LONG_MAX / 10
+			|| (result == FT_LONG_MAX / 10 && str[i] > FT_LONG_MAX % 10))
 		{
 			if (polarity > 0)
 				return (-1);
 			else
 				return (0);
 		}
-		output = output * 10 + (str[indx] - '0');
-		indx++;
+		result = result * 10 + (str[i] - '0');
+		i++;
 	}
-	return (output);
+	return (result);
 }
 
 int	ft_atoi(const char *str)
