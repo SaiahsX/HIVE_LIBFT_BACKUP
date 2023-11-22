@@ -37,7 +37,7 @@ char	*ft_strdup(const char *s1)
 	ft_memcpy(s2, s1, s1_len);
 	return (s2);
 }
-
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -50,3 +50,4 @@ int	main(void)
 	res = ft_strdup(string);
 	printf("%s\n", res);
 }
+*/
