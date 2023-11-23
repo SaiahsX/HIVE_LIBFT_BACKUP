@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 19:32:23 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/11/23 13:38:45 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/11/23 14:03:57 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,6 @@ Then make checks if no memory was not allocted and return Null if none	*/
 /*	ft_strlcat was used to concartenate the strings and equated to 'result'	*/
 /*	return value is the pointer to 'result', the new string	*/
 
-
-
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
@@ -34,6 +32,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	source = (char *)s2;
 	dest = (char *)s1;
+	if (!s1 || !s2)
+		return (NULL);
 	dest_len = ft_strlen(dest);
 	source_len = ft_strlen(source);
 
@@ -49,8 +49,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 int	main(void)
 {
-	char	d[] = "Hello_";
-	char	s[] = "world.";
+	char	d[] = "";
+	char	s[] = "";
 	
 	printf("%s\n", ft_strjoin(d, s));
 } */
