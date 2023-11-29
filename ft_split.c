@@ -80,7 +80,7 @@ static char	**ft_filling_substr(char **split_res, char const *s, char c)
 		len = start;
 		while (s[len] != c && s[len] != '\0')
 			len++;
-		split_res[j] = ft_substr(s, start, (len - start + 1));
+		split_res[j] = ft_substr(s, start, (len - start));// '+ 1' is removed because it added an extra space after each substring
 		if (!split_res[j])
 			return (ft_free_function(split_res));
 		j++;
