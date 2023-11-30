@@ -100,6 +100,8 @@ char	**ft_split(char const *s, char c)
 	split_res = ft_filling_substr(split_res, s, c);
 	return (split_res);
 }
+/*
+
 #include <stdio.h>
 
 int	main(void)
@@ -120,3 +122,4 @@ int	main(void)
 		i++;
 	}
 }
+*/
