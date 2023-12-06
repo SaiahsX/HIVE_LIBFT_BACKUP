@@ -12,16 +12,17 @@
 
 /* This function counts the number of characters 
 pointed to by the string 'str' and returns an integer value 'count'*/
+/*	Modification on the variable type was done from 'char' to 'const char'.
+This is in line with the manual prototype.	*/
 /* This function imitates the standard C libraray function 'strlen'*/
 
-int	ft_strlen(char *str)
+int	ft_strlen(const char *str)
 {
 	int	count;
 
 	count = 0;
-	while (*str != '\0')
+	while (str[count] != '\0')
 	{
-		str++;
 		count++;
 	}
 	return (count);
