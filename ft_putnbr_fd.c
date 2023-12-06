@@ -12,7 +12,11 @@
 
 /*	This function uses recursive method to convert integer values to ASCII 
 character and print(write) it out.	*/
-/*	In this function, the min int (-2147483648) to be printed exclusively.	*/
+/*	In this function, the min int (-2147483648) was printed exclusively.	*/
+/*	The preivious statment was no longer true and had to be replaced by
+a new variable declaration, long nb, which will take care of the long min
+long max edge cases or prevent an overflow.	*/
+/*	Hence, every int n variable replaced with nb reflecting long variable	*/
 /*	Else, This function takes care of every value 
 up to max int (2147483647).	*/
 /*	If there is a negative value, the '-' sign is printed out exclusively
@@ -28,27 +32,23 @@ to the top. 	*/
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	c;
+	long	nb;
 
-	if (n == -2147483648)
+	nb = n;
+	if (nb < 0)
 	{
-		write(1, "-2147483648", 11);
-		return ;
+		ft_putchar_fd(('-'), fd);
+		nb *= -1;
 	}
-	if (n < 0 && n > -2147483648)
+	if (nb < 10)
 	{
-		ft_putchar_fd(('-'), 1);
-		n *= -1;
+		ft_putchar_fd((nb + '0'), fd);
 	}
-	if (n < 10)
+	if (nb >= 10)
 	{
-		ft_putchar_fd((n + '0'), 1);
-	}
-	else
-	{
-		ft_putnbr_fd((n / 10), fd);
-		c = n % 10 + '0';
-		ft_putchar_fd(c, 1);
+		ft_putnbr_fd((nb / 10), fd);
+		nb = (nb % 10) + '0';
+		ft_putchar_fd(nb, fd);
 	}
 }
 /* 
@@ -59,7 +59,7 @@ int	main(void)
 	int	input3;
 	int	input4;
 
-	input1 = -214743648;
+	input1 = -2147483648;
 	ft_putnbr_fd(input1, 1);
 	ft_putchar_fd(('\n'), 1);
 
