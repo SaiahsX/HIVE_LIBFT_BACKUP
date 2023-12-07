@@ -15,13 +15,16 @@ while len is the max lent of the substring	*/
 /*	To do this, a char pointer to new variable (subs_string) is created	*/
 /*	ft_strlen of the (typecasted)source is done since strlen had a char. 	*/
 /*	Some checks are performed namely:
-1.	if the start index > source length, return the null/ '\0'.
+1.	if the start index > source length, return the null/ '\0'.(corrected below)
 2.	if the len > the difference between source_len & start index,
 		perform the operation of len = source_len - start index.
 3.	After the allocation memory to the subs_string, check if enough memory
 	is allocated, if not return NULL.	*/
 /*	The substring is calculated by iterating through the source while
 using the start index + source index. Then null terminate the substring.	*/
+/*	Update: step 1 return is fauty due to inability to free unallocted memory.
+Thus, we use the calloc function to allocate nd free the size of an empty
+string.	*/
 
 #include "libft.h"
 
@@ -33,13 +36,11 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	source_len = ft_strlen((char *) s);
-
 	if (start > source_len)
-		return (0);
+		return (ft_calloc(1, sizeof(char)));
 	if (len > (source_len - start))
 		len = source_len - start;
-
-	subs_string = (char *)malloc ((len +1) * sizeof (char));
+	subs_string = (char *)malloc ((len + 1) * sizeof (char));
 	if (!subs_string || !s)
 		return (NULL);
 	while (i < len)
