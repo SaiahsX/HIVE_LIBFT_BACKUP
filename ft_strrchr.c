@@ -17,12 +17,15 @@ address of the last occurence of 'c' and
  everything afterwards is also printed*/
 /* In this function, i used the behaviour of ft_strlen 
 to count to the end of the string and searched backwards*/
+/*	The condition of seaarch is modified from str[count] >= 0 to 
+count >= 0, since this is logical and woud terminate when the count 
+reaches 0.	*/
 /* This function imitates the standard C library funtion strrchr*/
 
 char	*ft_strrchr(const char *str, int c)
 {
-	char	x;
-	int		count;
+	unsigned char	x;
+	int				count;
 
 	x = c;
 	count = 0;
@@ -30,7 +33,7 @@ char	*ft_strrchr(const char *str, int c)
 	{
 		count++;
 	}
-	while (str[count] >= 0)
+	while (count >= 0)
 	{
 		if (str[count] == x)
 			return ((char *)str + count);
