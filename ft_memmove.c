@@ -13,7 +13,9 @@
 /* This function copies  'len' bytes from string 'src' to string 'dst'.
 The two strings may overlap; 
 the copy is always done in a non-destructive manner. */
-/* This fuunction is written such that if the 2 strings overlap, 
+/*	Added the condition if dst == src. i.e. if the adresses are the same, then
+no need for memcopy, thus, it returns dst.	*/
+/* This function is written such that if the 2 strings overlap, 
 it reverses the direction of copy.
 This is done first by specifying a condition 'if dst > src' and
 a switch 'dir' is used to influence the direction of copying.*/
@@ -33,6 +35,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	org = (char *)src;
 	i = 0;
 	dir = 1;
+	if (dst == src)
+		return (dst);
 	if (dst > src)
 	{
 		i = len - 1;
