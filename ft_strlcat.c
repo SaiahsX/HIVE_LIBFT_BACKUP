@@ -18,8 +18,8 @@ for src to occupy, hence, 'space_for_src = dstsize - dstlen - 1',
 this we will set as a limiter for the function.	*/
 /*	In this function, I began to utilise my premade function ft_strlen. 	*/
 /*	Also I began to use my header file 'libft.h'	*/
-/*	This meant I had to typecast the source type from const char to char 
-in this function, to make it match the called function variable	*/
+/*	Added a condition if both dst and dstsize are 0, it return src lenght	*/
+/*	Also added + 1 to the condition if dstlen + 1 > dstsize.	*/
 /*	In this function, the return values vary in the sense that if the 
 if the dstlen is larger than dstsize, we get the sum of dstsize & srclen 
 as return values and nothing from source is copied as a result.	*/
@@ -35,19 +35,18 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	srclen;
 	size_t	src_i;
 	size_t	space_for_src;
-	char	*source;
 
 	src_i = 0;
-	source = (char *) src;
+	if (!dst && !dstsize)
+		return (ft_strlen(src));
 	dstlen = ft_strlen(dst);
-	srclen = ft_strlen(source);
-	if (dstlen > dstsize)
+	srclen = ft_strlen(src);
+	if (dstlen + 1 > dstsize)
 		return (dstsize + srclen);
 	space_for_src = dstsize - dstlen - 1;
-
-	while (source[src_i] != '\0' && src_i < space_for_src)
+	while (src[src_i] != '\0' && src_i < space_for_src)
 	{
-		dst[dstlen + src_i] = source[src_i];
+		dst[dstlen + src_i] = src[src_i];
 		src_i++;
 	}
 	dst[dstlen + src_i] = '\0';
