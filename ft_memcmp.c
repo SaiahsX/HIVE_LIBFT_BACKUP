@@ -16,6 +16,8 @@ Both strings are assumed to be n bytes long*/
 else, it returns the difference in ascii values of the non identical strings*/
 /* The 2 strings are treated as unsigned char as per the manual and the 
 is also compensatimg for null strings values which returns a null*/
+/*	removed the condition (alpha[i] != '\0' || beta[i] != '\0') from the 
+while loop because the program should be able to compare  empty string.	*/
 /* This function imitates the behaviour of the standard C library
 function 'memcmp'*/
 
@@ -32,7 +34,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	if (!alpha && !beta)
 		return (0);
-	while ((alpha[i] != '\0' || beta[i] != '\0') && i < n)
+	while (i < n)
 	{
 		if (alpha[i] != beta[i])
 		{
