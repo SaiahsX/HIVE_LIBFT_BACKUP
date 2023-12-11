@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 13:06:30 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/12/11 13:19:10 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/12/11 13:26:38 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,43 +45,3 @@ t_list	*ft_lstnew(void *content)
 	new_node -> next = NULL;
 	return (new_node);
 }
-
-/* #include <stdio.h>
-
-//when declaring a struct node t_list	tmp2, and we want the new node to 
-// point to the previous node, also, since tmp2 is a memory in the stack memory
-// and not a pointer, we do not use the arrows '->' but a '.' to make the link. 
-
-int	main(void)
-{
-	char	*ctt;
-	t_list	*stack;
-	t_list	tmp2;
-
-	ctt = "synonym";
-	tmp2.content = ctt;
-	stack = ft_lstnew(ctt);
-	printf("%s\n", stack -> content);
-	printf("%s\n", tmp2.content);
-	free (stack);
-}
- */
-// #include <stdio.h>
-
-// int main() 
-// {
-//     // Testing the ft_lstnew function
-//     int data = 42;
-//     t_list *node = ft_lstnew(&data);
-
-//     if (node != NULL) {
-//         printf("New node created successfully.\n");
-//         printf("Content of the node: %d\n", *((int *)node->content));
-//     } else {
-//         printf("Failed to create a new node.\n");
-//     }
-
-//     // Freeing allocated memory
-//     free(node);
-//     return 0;
-// }
