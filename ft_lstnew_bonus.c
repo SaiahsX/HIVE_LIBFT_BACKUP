@@ -6,7 +6,7 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 13:06:30 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/12/11 13:06:35 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/12/11 13:19:10 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ t_list	*ft_lstnew(void *content)
 	return (new_node);
 }
 
-#include <stdio.h>
+/* #include <stdio.h>
 
 //when declaring a struct node t_list	tmp2, and we want the new node to 
 // point to the previous node, also, since tmp2 is a memory in the stack memory
@@ -65,7 +65,7 @@ int	main(void)
 	printf("%s\n", tmp2.content);
 	free (stack);
 }
-
+ */
 // #include <stdio.h>
 
 // int main() 
