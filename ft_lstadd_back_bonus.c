@@ -6,9 +6,21 @@
 /*   By: oadewumi <oadewumi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 14:18:18 by oadewumi          #+#    #+#             */
-/*   Updated: 2023/12/11 14:57:44 by oadewumi         ###   ########.fr       */
+/*   Updated: 2023/12/12 17:43:00 by oadewumi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*	This function adds a new node (t_list *new)	to the end of the list 
+that t_list **lst is pointing to.	*/
+/*	To do this, I understood that moving from the first node to the next could 
+lead to losing the head (first node), hence, we create a new t_list *extra to 
+hold the position and content of dereferenced (**lst), so to *lst. 	*/
+/*	However, we need to put some conditions in place:
+.	If *lst is NULL, then *lst is equal 'new'. and the program returns (ends).
+.	If new exists, then run the function in a loop with 'extra' as the new head
+pointing to the next node until the last node. Then equate the last node ref
+to 'new'.	*/
+/*	Since its a void function. it has no return value.	*/
 
 #include "libft.h"
 
